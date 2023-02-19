@@ -4,7 +4,7 @@ A desperate try for some action and adrenaline
 
 -----
 
-![CTF](https://img.shields.io/badge/Securinets%20CTF-Christmas-orange?style=for-the-badge) ![level](https://img.shields.io/badge/Level-Beginner-green?style=for-the-badge)
+![CTF](https://img.shields.io/badge/Securinets%20CTF-Valentine-red?style=for-the-badge) ![level](https://img.shields.io/badge/Level-Beginner-green?style=for-the-badge)
 
 This Repository Contains The Challenges of Securinets Valentine CTF 2023
 
