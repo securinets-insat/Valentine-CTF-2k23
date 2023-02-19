@@ -1,0 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@font-face {
+  font-family: 'Type02';
+    src:  url('/Type02-Bold.ttf.woff') format('woff'),
+    url('/Type02-Bold.ttf.svg#Type02-Bold') format('svg'),
+    url('/Type02-Bold.ttf.eot'),
+    url('/Type02-Bold.eot?#iefix') format('embedded-opentype'); 
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+.syne {
+  font-family: 'Syne', sans-serif !important;
+}
+
+.type02 {
+  font-family: 'Type02', sans-serif !important;
+}

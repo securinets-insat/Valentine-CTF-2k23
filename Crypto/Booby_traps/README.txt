@@ -1,0 +1,5 @@
+Author: SSONEDE
+
+Flag: Securinets{never_dr1NK_whI13_Do1ng_1MportANT_worK}
+
+Attachment: [out](./out.txt)

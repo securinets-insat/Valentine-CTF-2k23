@@ -1,0 +1,45 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <title>OMingle</title>
+</head>
+<body>
+  <div class="min-h-screen grid place-content-center bg-[#d44356]">
+    <form class="w-96 flex-col space-y-4" method="post">
+        <h1 class="text-center">
+          <span class="text-4xl font-bold text-white">
+            Вы адзінокія і гатовыя да <span class="font-black">зносін</span>?</span>
+        </h1>
+        <img 
+          src="{{ url_for('static', filename='omingle.png') }}" 
+          alt="illustration"
+        />
+
+
+        <span class="text-white">
+            {{ name }}
+        </span>
+
+        
+
+        <input 
+          class="border p-2 w-full rounded-md" 
+          type="text" 
+          name="pretty-name" 
+          placeholder="Увядзіце імя"
+        />
+
+        <a
+          class="text-white block text-center" 
+          href="/code" 
+          target="_blank"
+        >
+          Праверце мой код
+        </a>
+    </form>
+</div>
+</body>
+</html>

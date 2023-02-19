@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Style+Script&display=swap" rel="stylesheet">
+    <title>Toxic Javascript</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      .cool {
+        font-family: 'Style Script', cursive;
+      }
+    </style>
+  </head>
+  <body class="text-pink-500 bg-[#eef] grid place-content-center h-screen">
+    <div class="">
+      <h1 class="text-center text-7xl cool">
+        Watch this <a class="font-black" href="https://www.youtube.com/shorts/VF0vT10Gtj4" target="_blank">
+          youtube video
+        </a> to get started
+      </h1>
+      <div>
+        <form name="form" class="flex flex-col space-y-3 py-20 items-center">
+          <label for="flag" class="text-4xl font-medium text-center cool">Enter Flag</label>
+          <div
+            class="w-[500px] font-mono bg-white flex items-center rounded-md focus-within:ring-4 focus-within:ring-pink-900/30 focus-within:duration-300">
+            <span id="flag-wrapper" class="px-3 py-2 grid place-content-center bg-pink-500 text-white rounded-l-md"></span>
+            <input required type="text" name="flag" id="flag" class="px-3 py-2 flex-1 focus:outline-none" />
+            <span class="px-3 py-2 grid place-content-center bg-pink-500 text-white rounded-r-md">}</span>
+          </div>
+          <button type="submit"
+            class="text-3xl px-3 py-2 rounded-md bg-white text-pink-600 hover:bg-pink-600 hover:text-white hover:duration-300 duration-300 cool">Validate</button>
+        </form>
+      </div>
+    </div>
+    <script type="module" src="/index-5da0c4d6.js"></script>
+    <script>
+
+      const SECRET = [
+        123, 84, 153, 85, 104, 131, 153, 131, 144, 105, 141, 131, 86, 131, 88, 131,
+        135, 84, 136, 105, 150, 131, 84, 150, 131, 114, 88, 140,
+      ]
+        .map(c => String.fromCharCode(c))
+        .join('')
+
+
+      const form = document.querySelector('form')
+
+      form.addEventListener('submit', function validate(e) {
+        e.preventDefault()
+        const formData = new FormData(e.target)
+        const flag = formData.get('flag')
+
+        const encrypted_flag = flag
+          .reverse()
+          .map(c => String.fromCharCode(c.charCodeAt(0) ^ 45))
+          .join('')
+
+        if (encrypted_flag !== SECRET) {
+          alert(false)
+        } else {
+          alert(true)
+        }
+      })
+
+    </script>
+  </body>
+</html>

@@ -1,0 +1,11 @@
+version: '3'
+services:
+  shell-jail:
+    build: .
+    container_name: shell-jail
+    read_only: true
+    volumes:  
+      - ./data/flag.txt:/app/data/flag.txt:ro
+    ports:
+      - "4050:8080"
+    tty: true
